@@ -2,15 +2,15 @@
 
 ### Introduction
 
-MinGW is a widely used compiler which provides developers with the ability to create native Windows binaries using a
-Unix-like development environment. The CopperSpice MinGW-CS distribution is built with the aim of providing an
-efficient and easy-to-use development environment for both new and experienced developers.
+The MinGW-w64 project includes a widely used compiler which developers can use to create native Windows binaries in a
+Unix like development environment. The CopperSpice MinGW-w64 distribution provide an efficient and easy to use
+development environment for both new and experienced developers.
 
-Our distribution of MinGW and the POSIX utilities does not use the old msys files, msys2, or cygwin. Every program has
-been compiled from source which was downloaded from the upstream projects. Please ensure you do not have msys2 or
-cygwin in your path.
+Our distribution of MinGW and the POSIX utilities do not use the msys files, msys2, or cygwin. Every program in our
+distribution has been compiled from current source which was downloaded from the respective upstream project. Please
+ensure you do not have msys2 or cygwin in your path.
 
-The ***MinGW-CS*** distribution includes the GCC compiler for Windows, Autotools build system, POSIX utilities,
+The ***MinGW-w64*** distribution includes the GCC compiler for Windows, Autotools build system, POSIX utilities,
 and programs which can be run in a shell environment.
 
 __Compiler__
@@ -23,6 +23,7 @@ __Toolchain__
  * bison
  * flex &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ( pending )
  * libtool
+ * m4
  * make
  * openssl
  * pcre
@@ -39,6 +40,7 @@ __Command Line Utilities__
  * date - Prints/sets the system date and time
  * dirname - Removes the last level or filename from a given pathname
  * echo - Writes the text passed to this command to standard output adding a newline
+ * env - Displays or modifies the environment
  * factor - Prints prime factors
  * false - Returns an unsuccessful exit status
  * hostname - Print or set the machine name
@@ -58,6 +60,11 @@ __Command Line Utilities__
  * yes - Print a string repeatedly
 
 __Compression Utilities__
+ * 7z - Compress multiple files into one output file supporting a wide range of compression algorithms
+ * bunzip2 - Decompress a bzip2 file
+ * bzcat - Decompresses a bzip2 file, output to standard output
+ * bzip2 - Compress a single file using the .bz2 file format
+ * bzip2recover - Search blocks in a .bz2 file and write to a new file
  * gzip - Compress a single file using the .gz file format
  * gunzip - Decompress a gzip file
  * gzexe - Compress executables in place and automatically uncompress and execute
@@ -76,7 +83,10 @@ __File Utilities__
  * base32 - Encode/Decode text from a file or standard input to base32
  * base64 - Encode/Decode text from a file or standard input to base64
  * chmod - Changes file permissions [^1]
+ * cmp - Compare contents of files
  * cp - Copy files
+ * diff - Compares two files and outputs the differences
+ * diff3 - Compares three files and outputs the differences
  * dircolors - Configure the color output of ls
  * ln - Creates a hard link to a file
  * lzcmp - Compare contents of compressed files
@@ -87,6 +97,7 @@ __File Utilities__
  * mv - Moves files
  * rm - Removes or deletes files
  * rmdir - Removes empty directories
+ * sdiff - Similar to diff where the output is shown a side-by-side format
  * touch - Changes file timestamps
  * truncate - Trim a file to the specified size
  * unlink - Remove a hard link to a file
@@ -124,14 +135,17 @@ __Text Utilities__
  * csplit - Splits a file into sections determined by context lines
  * cut - Remove sections from each line of files
  * expand - Convert tabs to spaces
+ * fmt - Simple optimal text formatter
  * fold - Wrap each input line to fit in specified width
  * head - Output the first part of a file
  * join - Join lines of two files on a common field
  * lzcat - Concatenates and prints compressed files to standard output
  * lzless - View contents of a compressed text file, one screen at a time
  * lzmore - Similar to lzless
- * nl - Number lines of files
+ * nl - Numbers the lines in a file
+ * od - Dump files in octal and other formats
  * paste - Merge lines of files
+ * ptx - Produce a permuted index of file contents
  * sed - Stream editor for filtering text
  * shuf - Shuffles lines in a file
  * sort - Sort lines of text files
@@ -150,7 +164,7 @@ __Text Utilities__
  * zmore - Similar to zless
 
 __Text Editor__
- * ( pending )
+ * nano - Small editor for a terminal window
 
 
 ### Additional Programs
@@ -160,7 +174,6 @@ The following is a list of other program which may be required when developing y
 
 |Application  |URL        |
 |-------------|-----------|
-|7z           |https://7-zip.org/download.html               |
 |cmake        |https://cmake.org/download/                   |
 |git          |https://git-scm.com/                          |
 |ninja        |https://github.com/ninja-build/ninja/releases |
@@ -169,15 +182,18 @@ The following is a list of other program which may be required when developing y
 
 <br>
 
-### Additional POSIX Utilities
+### Additional Information
 
-If you need command or utilities like bash, find, flex, ls, or rsync we strongly encouage you to use the ones
-distributed by in the zip file shown below. These will be added to our MinGW distribution as time permits.
+If you need commands like bash, find, flex, ls, or rsync we strongly encouage you to use the ones
+distributed in the zip file listed below. These will be adding these to our distribution.
 
-In order to use bash you will need the files: /bin/bash.exe, /bin/sh.exe, and /share/termcap in these exact folder
-names.
+In order to use bash you will need the files: /bin/bash.exe, /bin/sh.exe, and /etc/termcap in these exact folder
+locations.
 
-Older versions of these utilities can be found in the following 7z file. <br>
+When using a Windows command prompt (windows console) you will need to set the enviroment variable
+for TERM to #win32con.
+
+Older versions of utilities can be found in the following 7z file. <br>
 &nbsp; &nbsp; &nbsp; https://download.copperspice.com/toolchain/mingw/msys+7za+wget+svn+git+mercurial+cvs-rev13.7z
 
 
@@ -190,7 +206,7 @@ MinGW-CS development tools require a computer running Windows 10 or newer.
 
 ### License
 
-* MinGW is licensed under: GPL 3, GPL 2, BSD, LGPL 3, and LGPL 2.1
+* MinGW-w64 is licensed under: GPL 3, GPL 2, BSD, LGPL 3, and LGPL 2.1
 
 * GCC is licensed under both GPL 3 or GPL 2.
 
