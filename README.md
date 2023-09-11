@@ -10,6 +10,16 @@ Our distribution of MinGW and the POSIX utilities do not use the msys files, msy
 distribution has been compiled from current source which was downloaded from the respective upstream project. Please
 ensure you do not have msys2 or cygwin in your path.
 
+
+__Supported Versions__
+
+The following versions correspond to the equivalent GCC versions.
+
+* MinGW 10.4
+* MinGW 11.4
+* MinGW 12.3
+
+
 The ***MinGW-w64*** distribution includes the GCC compiler for Windows, Autotools build system, POSIX utilities,
 and programs which can be run in a shell environment.
 
@@ -169,7 +179,7 @@ __Text Editor__
 
 ### Additional Programs
 
-The following is a list of other program which may be required when developing your application.
+The following is a list of other programs which may be required when developing your application.
 
 
 |Application  |URL        |
