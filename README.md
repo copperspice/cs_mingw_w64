@@ -13,11 +13,20 @@ ensure you do not have msys2 or cygwin in your path.
 
 __Supported Versions__
 
-The following versions correspond to the equivalent GCC versions.
+The following versions correspond to the equivalent GCC versions and are ABI compatible with each other.
 
 * MinGW 10.4
+* MinGW 10.5
+
+<!-- -->
 * MinGW 11.4
+* MinGW 11.5
+
+<!-- -->
 * MinGW 12.3
+
+<!-- -->
+* MinGW 13.2
 
 
 The ***MinGW-w64*** distribution includes the GCC compiler for Windows, Autotools build system, POSIX utilities,
