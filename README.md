@@ -3,12 +3,12 @@
 ### Introduction
 
 The MinGW-w64 project includes a widely used compiler which developers can use to create native Windows binaries in a
-Unix like development environment. The CopperSpice MinGW-w64 distribution provide an efficient and easy to use
+Unix like development environment. The CopperSpice MinGW-w64 distribution provides an efficient and easy to use
 development environment for both new and experienced developers.
 
-Our distribution of MinGW and the POSIX utilities do not use the msys files, msys2, or cygwin. Every program in our
-distribution has been compiled from current source which was downloaded from the respective upstream project. Please
-ensure you do not have msys2 or cygwin in your path.
+Our distribution of MinGW and the POSIX utilities do not use or require the msys files, msys2, or cygwin. Every
+program in our distribution has been compiled from current source which was downloaded from the respective upstream
+projects. You should ensure msys2 and cygwin are not in your path.
 
 
 __Supported Versions__
@@ -24,13 +24,31 @@ The following versions correspond to the equivalent GCC versions and are ABI com
 
 <!-- -->
 * MinGW 12.3
+* MinGW 12.4
 
 <!-- -->
 * MinGW 13.2
+* MinGW 12.3
+
+<!-- -->
+* MinGW 14.2
 
 
 The ***MinGW-w64*** distribution includes the GCC compiler for Windows, Autotools build system, POSIX utilities,
 and programs which can be run in a shell environment.
+
+
+__Release History__
+
+* Update binutils to 2.43.1 which includes a new faster linker
+* Add MinGW 14.2
+* Update to MinGW 10.5, MinGW 11.5, MinGW 12.4, MinGW 13.3
+
+<!-- -->
+* Majority of POSIX utilities are included with each distribution
+* Release MinGW 11.4, MinGW 12.3, MinGW 13.2
+* Release MinGW 10.4
+
 
 __Compiler__
  * GCC compiler, linker, libraries, and header files
