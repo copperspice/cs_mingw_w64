@@ -28,7 +28,7 @@ The following versions correspond to the equivalent GCC versions and are ABI com
 
 <!-- -->
 * MinGW 13.2
-* MinGW 12.3
+* MinGW 13.3
 
 <!-- -->
 * MinGW 14.2
